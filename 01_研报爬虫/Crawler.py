@@ -211,6 +211,10 @@ def DownloadReport(reportType, beginTime, endTime, filepath,substract_option):
             DownloadRecords = pd.concat([DownloadRecords, records], axis=0)
             DownloadRecords.to_excel(filepath + '/DownloadRecords.xls', encoding='gbk', index=False)
         print('')
+
+    if substract_option:
+        os.rmdir(filepath+'/PdfImg')
+
     try:
         # --打印本次下载结果--
         record_summary=records['reportDetailType'].value_counts()

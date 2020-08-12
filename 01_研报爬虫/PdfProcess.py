@@ -120,7 +120,7 @@ def graph2text(page_count,imagePath):
                 os.remove(imagePath+'/images_{}.png'.format(page))
             else:
                 os.remove(imagePath + '/images_{}.png'.format(page))
-    os.remove(imagePath)
+
     return '，'.join(texts)
 
 def pdf_extract(filepath,pdfPath):

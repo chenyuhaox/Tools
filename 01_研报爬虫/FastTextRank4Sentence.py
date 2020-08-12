@@ -56,8 +56,8 @@ class FastTextRank4Sentence(object):
         graph = self.create_graph_sentence(sents,self.__use_w2v)
         scores = util.weight_map_rank(graph,self.__max_iter,self.__tol)
         num=len(scores)
-        if num>3:
-            n=3
+        if num>1:
+            n=1
             sent_selected = nlargest(n, zip(scores, count()))
         else:
             n=num
@@ -65,7 +65,7 @@ class FastTextRank4Sentence(object):
         sent_index = []
         for i in range(n):
             sent_index.append(sent_selected[i][1])  # 添加入关键词在原来文章中的下标
-        return [str(counts+1)+'、'+sentences[i] for i,counts in zip(sent_index,range(n)) if sentences[i]!='']
+        return [sentences[i] for i,counts in range(n) if sentences[i]!='']
 
     def create_graph_sentence(self,word_sent, use_w2v):
         num = len(word_sent)

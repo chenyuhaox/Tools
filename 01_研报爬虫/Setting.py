@@ -2,23 +2,23 @@ import time
 
 # 运行信息
 work_info={
-    'file_path': r'C:\Users\chenyuhao\Desktop\研报下载',
-    'beginTime' : time.strftime('%Y-%m-%d', time.localtime()),
-    'endTime' : time.strftime('%Y-%m-%d', time.localtime()),
+    'file_path': '//Mac/Home/Desktop/report',
+    'beginTime' :'20200802',# time.strftime('%Y-%m-%d', time.localtime()),
+    'endTime' : '20200802', #time.strftime('%Y-%m-%d', time.localtime()),
     'reportType':['策略报告','宏观研究'],
-    'substract_option':False
+    'substract_option':True
 }
 # 邮箱配置信息
 mail_info = {
-    'receivers' : ["xxxxx@qq.com",'xxxxx@163.com'], # 收件人
-    'sender' : "xxxxx@126.com", # 发件人
-    'mail_password' : "xxxxx", # smtp授权码
-    'smtp':'smtp.126.com' #smtp地址
+    'receivers' : ["yhaochen@qq.com"], # 收件人
+    'sender' : "chenyuhao_mail@163.com", # 发件人
+    'mail_password' : "PNPIPNEAWGIKLYBN", # smtp授权码
+    'smtp':'smtp.163.com' #smtp地址 126/163
 }
 
-# 百度api配置信息(若substract_option=False，此处无需修改也可)
+# 百度api配置信息
 baidu_info = {
-    'APP_ID' : 'xxxxx',
-    'API_KEY' : 'xxxxx',
-    'SECRET_KEY' : 'xxxxx'
+    'APP_ID' : '21864967',
+    'API_KEY' : '55c7jFW9xDdexNtIaPvLZQOE',
+    'SECRET_KEY' : 'mbRjQwj6b4whliWduGN8C4HB7RGEj7Gj'
 }
